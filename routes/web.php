@@ -56,6 +56,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TaskController;
 // use App\Http\Controllers;
 //이거안됨
  //Route::get('/', 'HomeController@index');
@@ -67,3 +68,7 @@ Route::get('/hello','App\Http\Controllers\HomeController@hello');
 Route::get('/contact',[HomeController::class, 'contact']);
 
 Route::get('/projects',[ProjectController::class, 'index']);
+
+Route::get('/tasks',[TaskController::class, 'index']);
+
+Route::get('/tasks/create',[TaskController::class, 'create']);
