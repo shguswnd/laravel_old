@@ -1,5 +1,6 @@
 @extends('layout')
 
+<<<<<<< HEAD
 @section('title')
     Tasks
 @endsection
@@ -19,5 +20,13 @@
         <button class="bg-red-100 text-white px-4 py-3 float-left">Submit</button>
     </form>
     </div>
+=======
+<!-- 한줄오만들어도됨. -->
+@section('title', 'Create Task')
+
+
+@section('content')
+    <h1 class="font-bold">Create Task</h1>
+>>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
 @endsection
 

@@ -1713,11 +1713,14 @@ border-color: rgb(185 28 28);
   padding-bottom: 2rem;
 }
 
+<<<<<<< HEAD
 .px-12 {
   padding-left: 24.0rem;
   padding-right: 24.0rem;
 }
 
+=======
+>>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
