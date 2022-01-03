@@ -11,9 +11,13 @@
 
         <!-- Styles -->
     <title>@yield('title', 'Laravel')</title>
-    </head>
+    <link rel="stylesheet" href="{{ mix('css/tailwind.css')}}">    
+
+
+</head>
     <body class="antialiased">
     <ul>
+        <div class="bg-gray-100">hello</div>
                 <li><a href="/">Welcome</a></li>
                 <li><a href="/contact">C</a></li>
                 <li><a href="/hello">H</a></li>
