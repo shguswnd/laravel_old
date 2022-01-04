@@ -653,11 +653,11 @@ select {
   list-style-type: lower-alpha;
 }
 
-.prose :where(ol[type="A" s]):not(:where([class~="not-prose"] *)) {
+.prose :where(ol[type="A"]):not(:where([class~="not-prose"] *)) {
   list-style-type: upper-alpha;
 }
 
-.prose :where(ol[type="a" s]):not(:where([class~="not-prose"] *)) {
+.prose :where(ol[type="a"]):not(:where([class~="not-prose"] *)) {
   list-style-type: lower-alpha;
 }
 
@@ -669,11 +669,11 @@ select {
   list-style-type: lower-roman;
 }
 
-.prose :where(ol[type="I" s]):not(:where([class~="not-prose"] *)) {
+.prose :where(ol[type="I"]):not(:where([class~="not-prose"] *)) {
   list-style-type: upper-roman;
 }
 
-.prose :where(ol[type="i" s]):not(:where([class~="not-prose"] *)) {
+.prose :where(ol[type="i"]):not(:where([class~="not-prose"] *)) {
   list-style-type: lower-roman;
 }
 
@@ -1678,6 +1678,11 @@ border-color: rgb(185 28 28);
   padding-right: 1.5rem;
 }
 
+.px-12 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1713,14 +1718,8 @@ border-color: rgb(185 28 28);
   padding-bottom: 2rem;
 }
 
-<<<<<<< HEAD
-.px-12 {
-  padding-left: 24.0rem;
-  padding-right: 24.0rem;
-}
 
-=======
->>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -2529,4 +2528,3 @@ border-color: rgb(185 28 28);
     padding-right: 2rem;
   }
 }
-

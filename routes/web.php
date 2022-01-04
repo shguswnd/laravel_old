@@ -69,7 +69,6 @@ Route::get('/contact',[HomeController::class, 'contact']);
 
 Route::get('/projects',[ProjectController::class, 'index']);
 
-<<<<<<< HEAD
 
 Route::get('/tasks',[TaskController::class, 'index']);
 
@@ -79,8 +78,7 @@ Route::post('/tasks', [TaskController::class,'store']);
 
 Route::get('/tasks/{task}', [TaskController::class,'show']);
 
-=======
-Route::get('/tasks',[TaskController::class, 'index']);
+Route::get('/tasks/{task}/edit', [TaskController::class,'edit']);
 
-Route::get('/tasks/create',[TaskController::class, 'create']);
->>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
+//수정데이터 보내기
+Route::put('/tasks/{task}', [TaskController::class,'update']);

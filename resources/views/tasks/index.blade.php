@@ -1,6 +1,5 @@
 @extends('layout')
 
-<<<<<<< HEAD
 <!-- 한줄오만들어도됨. -->
 @section('title', 'Create Task')
 
@@ -17,7 +16,6 @@
         @endforeach
     </ul>
 </div>
-=======
 @section('title')
     Tasks
 @endsection
@@ -35,6 +33,5 @@
         <button class="bg-red-100">Submit</button>
     </form>
 
->>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
 @endsection
 

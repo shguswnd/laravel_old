@@ -3,33 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Models\Task;
-=======
->>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
 
 class TaskController extends Controller
 {
     //
     public function index()
     {
-<<<<<<< HEAD
         //테스트 모든 모델을 불러옴.
         $tasks = Task::all();
         return view('tasks.index', [
             'tasks' => $tasks
         ]);
         //index.blade.php와 layout.blade.php사용을하며 url/tasks에서 부름.
-=======
         return view('tasks.index');
->>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
     }
 
     public function create()
     {
         return view('tasks.create');
     }
-<<<<<<< HEAD
     
     public function store(Request $request)
     {  
@@ -50,10 +43,20 @@ class TaskController extends Controller
             'task' => $task
         ]);
     }
-=======
 
-    // public function {
+    public function edit(Task $task){
+        return view('tasks.edit', [
+            'task' => $task
+        ]);
+    }
 
-    // }
->>>>>>> f61b16ef925d7fa9354eb7affd64aa2f350ec37b
+    public function update(Task $task)
+    {
+        //라라벨은 리퀘스트를 매개변수 대신 아래와 같이 만들 수 있음.
+        $task->update([
+            'title' => request('title'),
+            'body' => request('body')
+        ]);
+        return redirect('/tasks/'.$task->id);
+    }
 }
