@@ -11,7 +11,9 @@ class TaskController extends Controller
     public function index()
     {
         //테스트 모든 모델을 불러옴.
-        $tasks = Task::all();
+        // $tasks = Task::all();
+        //정렬순서 변경.
+        $tasks = Task::orderBy('created_at','desc')->get();
         return view('tasks.index', [
             'tasks' => $tasks
         ]);
@@ -58,5 +60,12 @@ class TaskController extends Controller
             'body' => request('body')
         ]);
         return redirect('/tasks/'.$task->id);
+    }
+
+    public function destroy(Task $task)
+    {
+        $task->delete();
+
+        return redirect('/tasks');
     }
 }

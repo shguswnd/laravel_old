@@ -6,7 +6,13 @@
 
 @section('content')
 <div class="px-64">
+    <div>
     <h1 class="font-bold">Create Task</h1>
+    <a href="/tasks/create">
+        <button>Create Task</button>
+    </a>
+
+    </div>
     <ul>
         @foreach($tasks as $task)
             <a href="/tasks/{{$task->id}}">

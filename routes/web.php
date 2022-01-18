@@ -82,3 +82,5 @@ Route::get('/tasks/{task}/edit', [TaskController::class,'edit']);
 
 //수정데이터 보내기
 Route::put('/tasks/{task}', [TaskController::class,'update']);
+
+Route::delete('/tasks/{task}', [TaskController::class,'destroy']);
