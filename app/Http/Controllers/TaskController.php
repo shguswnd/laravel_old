@@ -26,15 +26,26 @@ class TaskController extends Controller
         return view('tasks.create');
     }
     
-    public function store(Request $request)
+    public function store()
     {  
+        //값이 없다면 아래를 확인 후 다시 create 페이지로 호출함.
+        //에러를 보여 주기 위해 create.blade.php로 에러 메세ㅈ; 호출하게 할것임.
+        request()->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        
         // DB값을 넣을꺼임.
         //태스트를 생성해주고 타이블 바디를 생성해준다.
         //리퀘스트에 값들을 받아옴.
-        $task = Task::create([
-            'title' => $request->input('title'),
-            'body' => $request->input('body')
-        ]);
+        // $task = Task::create([
+        //     'title' => $request->input('title'),
+        //     'body' => $request->input('body')
+        // ]);
+        
+        //위와 동일하다.
+        $task = Task::create(request(['title', 'body']));
+
 
         return redirect('/tasks/'.$task->id);
     }

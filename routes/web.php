@@ -1,8 +1,8 @@
 <?php
 
 
-//use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 // use Illuminate\Contracts\Container;
 
 // use App\Http\Controllers\WelcomeController;
@@ -61,7 +61,7 @@ use App\Http\Controllers\TaskController;
 //이거안됨
  //Route::get('/', 'HomeController@index');
 
- Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/hello','App\Http\Controllers\HomeController@hello');
 
@@ -83,4 +83,8 @@ Route::get('/tasks/{task}/edit', [TaskController::class,'edit']);
 //수정데이터 보내기
 Route::put('/tasks/{task}', [TaskController::class,'update']);
 
-Route::delete('/tasks/{task}', [TaskController::class,'destroy']);
+Route::delete('/tasks/{task}', [TaskController::class,'destrot']);
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class,'index']);
